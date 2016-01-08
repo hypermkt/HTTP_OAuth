@@ -25,10 +25,10 @@
   <email>mike@silverorange.com</email>
   <active>yes</active>
  </developer>
- <date>2013-11-01</date>
- <time>11:59:06</time>
+ <date>2013-11-05</date>
+ <time>14:56:11</time>
  <version>
-  <release>0.3.0</release>
+  <release>0.3.1</release>
   <api>0.3.0</api>
  </version>
  <stability>
@@ -51,6 +51,9 @@ New features and bugs fixed:
  * Fixed PEAR #18431. Handle PUT requests better in HTTP_OAuth_Provider.
  * Fixed PEAR #20106. rawBodyData always included in provider request.
  * Fixed PEAR #20107. Handle multiple query params with same name as array.
+ * Added LICENSE file.
+ * Include README in package file.
+ * Fixed reset() call in MessageTest in unit tests.
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -159,7 +162,8 @@ New features and bugs fixed:
     </dir> <!-- /tests/HTTP -->
     <file name="AllTests.php" role="test" />
    </dir> <!-- /tests -->
-   <file name="HTTP_OAuth-0.3.0.tgz" role="data" />
+   <file name="LICENSE" role="doc" />
+   <file name="README" role="doc" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
@@ -589,6 +593,37 @@ New features and bugs fixed:
  * Fixed PEAR #18431. Handle PUT requests better in HTTP_OAuth_Provider.
  * Fixed PEAR #20106. rawBodyData always included in provider request.
  * Fixed PEAR #20107. Handle multiple query params with same name as array.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.3.1</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2013-11-05</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+   <notes>
+API changes:
+ * added $body parameter to HTTP_OAuth_Provider::__construct()
+ * added HTTP_OAuth_Provider::setBody()
+ * renamed HTTP_OAuth_Provider::getPostData() to getBody()
+ * made HTTP_OAuth_Provider::getBody() public
+
+New features and bugs fixed:
+ * Fixed PEAR #17806. DELETE method is not supported.
+ * Fixed PEAR #18574. Avoid try-catch-rethrow.
+ * Fixed PEAR #18701. Only variables should be passed by reference.
+ * Fixed PEAR #18425. Array keys not decoded in HTTP_OAuth_Provider.
+ * Fixed PEAR #18431. Handle PUT requests better in HTTP_OAuth_Provider.
+ * Fixed PEAR #20106. rawBodyData always included in provider request.
+ * Fixed PEAR #20107. Handle multiple query params with same name as array.
+ * Added LICENSE file.
+ * Include README in package file.
+ * Fixed reset() call in MessageTest in unit tests.
    </notes>
   </release>
  </changelog>
