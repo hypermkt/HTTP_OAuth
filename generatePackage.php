@@ -22,6 +22,7 @@ $packagexml->setOptions(array(
         'generatePackage.php',
         'phpunit-bootstrap.php',
         'phpunit.xml',
+        'composer.json',
         'coverage*',
         '*.tgz',
     ),
@@ -37,34 +38,20 @@ $packagexml->setDescription('Allows the use of the consumer and provider angles 
 
 $packagexml->setChannel('pear.php.net');
 $packagexml->setAPIVersion('0.3.0');
-$packagexml->setReleaseVersion('0.3.1');
+$packagexml->setReleaseVersion('0.3.2');
 
 $packagexml->setReleaseStability('alpha');
 
 $packagexml->setAPIStability('alpha');
 
-$packagexml->setNotes('API changes:
- * added $body parameter to HTTP_OAuth_Provider::__construct()
- * added HTTP_OAuth_Provider::setBody()
- * renamed HTTP_OAuth_Provider::getPostData() to getBody()
- * made HTTP_OAuth_Provider::getBody() public
-
-New features and bugs fixed:
- * Fixed PEAR #17806. DELETE method is not supported.
- * Fixed PEAR #18574. Avoid try-catch-rethrow.
- * Fixed PEAR #18701. Only variables should be passed by reference.
- * Fixed PEAR #18425. Array keys not decoded in HTTP_OAuth_Provider.
- * Fixed PEAR #18431. Handle PUT requests better in HTTP_OAuth_Provider.
- * Fixed PEAR #20106. rawBodyData always included in provider request.
- * Fixed PEAR #20107. Handle multiple query params with same name as array.
- * Added LICENSE file.
- * Include README in package file.
- * Fixed reset() call in MessageTest in unit tests.
+$packagexml->setNotes('New features and bugs fixed:
+ * Fixed PEAR #20426. Authorization header values parsed incorrectly
+ * Added composer support.
 ');
 $packagexml->setPackageType('php');
 $packagexml->addRelease();
 
-$packagexml->detectDependencies();
+//$packagexml->detectDependencies();
 
 $packagexml->addMaintainer('lead',
                            'jeffhodsdon',

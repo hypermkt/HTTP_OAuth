@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+<package packagerversion="1.9.5" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
     http://pear.php.net/dtd/tasks-1.0.xsd
     http://pear.php.net/dtd/package-2.0
     http://pear.php.net/dtd/package-2.0.xsd">
@@ -25,10 +25,10 @@
   <email>mike@silverorange.com</email>
   <active>yes</active>
  </developer>
- <date>2013-11-05</date>
- <time>14:56:11</time>
+ <date>2016-01-08</date>
+ <time>11:43:20</time>
  <version>
-  <release>0.3.1</release>
+  <release>0.3.2</release>
   <api>0.3.0</api>
  </version>
  <stability>
@@ -37,23 +37,9 @@
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
  <notes>
-API changes:
- * added $body parameter to HTTP_OAuth_Provider::__construct()
- * added HTTP_OAuth_Provider::setBody()
- * renamed HTTP_OAuth_Provider::getPostData() to getBody()
- * made HTTP_OAuth_Provider::getBody() public
-
 New features and bugs fixed:
- * Fixed PEAR #17806. DELETE method is not supported.
- * Fixed PEAR #18574. Avoid try-catch-rethrow.
- * Fixed PEAR #18701. Only variables should be passed by reference.
- * Fixed PEAR #18425. Array keys not decoded in HTTP_OAuth_Provider.
- * Fixed PEAR #18431. Handle PUT requests better in HTTP_OAuth_Provider.
- * Fixed PEAR #20106. rawBodyData always included in provider request.
- * Fixed PEAR #20107. Handle multiple query params with same name as array.
- * Added LICENSE file.
- * Include README in package file.
- * Fixed reset() call in MessageTest in unit tests.
+ * Fixed PEAR #20426. Authorization header values parsed incorrectly
+ * Added composer support.
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -624,6 +610,23 @@ New features and bugs fixed:
  * Added LICENSE file.
  * Include README in package file.
  * Fixed reset() call in MessageTest in unit tests.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.3.2</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2016-01-08</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+   <notes>
+New features and bugs fixed:
+ * Fixed PEAR #20426. Authorization header values parsed incorrectly
+ * Added composer support.
    </notes>
   </release>
  </changelog>
